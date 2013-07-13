@@ -24,4 +24,4 @@ set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
 
 au Filetype html,xml,xsl,eruby source ~/.vim/closetag.vim 
 
-nnoremap <ESC> :nohl<RETURN><ESC>
+nnoremap <F2> :nohl<RETURN>
