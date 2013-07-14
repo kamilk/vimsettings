@@ -1,7 +1,11 @@
+set nocompatible
+
 filetype plugin on
 runtime macros/matchit.vim
 
 call pathogen#infect()
+
+syntax on
 
 set autoindent
 set expandtab
@@ -12,6 +16,7 @@ set ignorecase
 set smartcase
 set incsearch
 set hlsearch
+set history=50		" keep 50 lines of command line history
 colorscheme pablo
 
 au Filetype cpp,c set shiftwidth=4
@@ -22,6 +27,13 @@ set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
 set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
 
-au Filetype html,xml,xsl,eruby source ~/.vim/closetag.vim 
+if has('win32') || has ('win64')
+    let $VIMHOME = $HOME."/vimfiles"
+else
+    let $VIMHOME = $HOME."/.vim"
+endif
+let $CLOSETAGPATH=$VIMHOME."/closetag.vim"
+
+au Filetype html,xml,xsl,eruby source $CLOSETAGPATH
 
 nnoremap <F2> :nohl<RETURN>
