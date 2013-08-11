@@ -3,6 +3,14 @@ set nocompatible
 filetype plugin on
 runtime macros/matchit.vim
 
+if has('win32') || has ('win64')
+    let $VIMHOME = $HOME."/vimfiles"
+else
+    let $VIMHOME = $HOME."/.vim"
+endif
+let $CLOSETAGPATH=$VIMHOME."/closetag.vim"
+au Filetype html,xml,xsl,eruby source $CLOSETAGPATH
+
 call pathogen#infect()
 
 syntax on
@@ -27,13 +35,6 @@ set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
 set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
 
-if has('win32') || has ('win64')
-    let $VIMHOME = $HOME."/vimfiles"
-else
-    let $VIMHOME = $HOME."/.vim"
-endif
-let $CLOSETAGPATH=$VIMHOME."/closetag.vim"
-
-au Filetype html,xml,xsl,eruby source $CLOSETAGPATH
-
 nnoremap <F2> :nohl<RETURN>
+imap <C-Q> <C-R>=GetCloseTag()<CR>
+nmap <C-Q> a<C-Q><Esc>
