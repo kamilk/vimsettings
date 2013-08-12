@@ -1,5 +1,7 @@
 set nocompatible
 
+language US
+
 filetype plugin on
 runtime macros/matchit.vim
 
