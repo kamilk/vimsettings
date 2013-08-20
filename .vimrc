@@ -27,6 +27,7 @@ set smartcase
 set incsearch
 set hlsearch
 set history=50		" keep 50 lines of command line history
+set backspace=indent,eol,start
 colorscheme pablo
 
 au Filetype cpp,c set shiftwidth=4
