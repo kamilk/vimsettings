@@ -33,6 +33,10 @@ colorscheme pablo
 au Filetype cpp,c set shiftwidth=4
 au Filetype cpp,c set softtabstop=4
 
+au FileType javascript let b:delimitMate_expand_cr = 1
+au FileType javascript set shiftwidth=4
+au FileType javascript set softtabstop=4
+
 set nocompatible   " Disable vi-compatibility
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
