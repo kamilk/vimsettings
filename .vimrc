@@ -45,3 +45,4 @@ set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
 nnoremap <F2> :nohl<RETURN>
 imap <C-Q> <C-R>=GetCloseTag()<CR>
 nmap <C-Q> a<C-Q><Esc>
+nmap <F6> :make<CR>
