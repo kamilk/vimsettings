@@ -1,6 +1,8 @@
 set nocompatible
 
-language US
+if has('win32') || has ('win64')
+  language US
+endif
 
 filetype plugin on
 runtime macros/matchit.vim
