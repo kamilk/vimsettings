@@ -48,3 +48,4 @@ nnoremap <F2> :nohl<RETURN>
 imap <C-Q> <C-R>=GetCloseTag()<CR>
 nmap <C-Q> a<C-Q><Esc>
 nmap <F6> :make<CR>
+nmap <F8> :TagbarToggle<CR>
