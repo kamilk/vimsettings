@@ -28,3 +28,6 @@
 [submodule "bundle/vim-ps1"]
 	path = bundle/vim-ps1
 	url = https://github.com/PProvost/vim-ps1.git
+[submodule "bundle/scss-syntax"]
+	path = bundle/scss-syntax
+	url = https://github.com/cakebaker/scss-syntax.vim.git
