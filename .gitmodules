@@ -31,3 +31,6 @@
 [submodule "bundle/scss-syntax"]
 	path = bundle/scss-syntax
 	url = https://github.com/cakebaker/scss-syntax.vim.git
+[submodule "bundle/vim-latex"]
+	path = bundle/vim-latex
+	url = git://git.code.sf.net/p/vim-latex/vim-latex
