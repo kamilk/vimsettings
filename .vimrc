@@ -39,8 +39,15 @@ au Filetype cpp,c set softtabstop=4
 au FileType javascript let b:delimitMate_expand_cr = 1
 au FileType javascript set shiftwidth=4
 au FileType javascript set softtabstop=4
+
 au FileType tex set sw=2
-au FileType tex set iskeyword+=:
+au FileType tex nmap <F12> :w<LF>\ll\ls
+au FileType tex set wrap lbr
+au FileType tex nmap <C-i> i\textit{}
+au FileType tex imap <C-i> \textit{}
+au FileType tex nmap <C-b> i\textbf{}
+au FileType tex imap <C-b> \textbf{}
+au FileType tex set spell
 
 set nocompatible   " Disable vi-compatibility
 set laststatus=2   " Always show the statusline
@@ -55,6 +62,14 @@ nmap <F8> :TagbarToggle<CR>
 imap <C-Q> <C-R>=GetCloseTag()<CR>
 nmap <C-Q> a<C-Q><Esc>
 
+map <silent> <Up> gk
+imap <silent> <Up> <C-o>gk
+map <silent> <Down> gj
+imap <silent> <Down> <C-o>gj
+map <silent> <home> g<home>
+imap <silent> <home> <C-o>g<home>
+map <silent> <End> g<End>
+imap <silent> <End> <C-o>g<End>
 
 """"" latex
 
@@ -77,3 +92,10 @@ filetype indent on
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
+
+
+"" additional
+au FileType tex set iskeyword+=:
+au FileType tex let g:Tex_CompileRule_dvi = 'latex -src-specials -interaction=nonstopmode $*'
+au FileType tex TCTarget dvi
+
