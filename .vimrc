@@ -54,6 +54,8 @@ set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
 set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
 
+command CDC cd %:p:h " Change directory to the current file
+
 nnoremap <F2> :nohl<RETURN>
 nmap <F3> :NERDTreeToggle<CR>
 nmap <F6> :make<CR>
