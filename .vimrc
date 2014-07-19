@@ -43,10 +43,10 @@ au FileType javascript set softtabstop=4
 au FileType tex set sw=2
 au FileType tex nmap <F12> :w<LF>\ll\ls
 au FileType tex set wrap lbr
-au FileType tex nmap <C-i> i\textit{}
-au FileType tex imap <C-i> \textit{}
-au FileType tex nmap <C-b> i\textbf{}
-au FileType tex imap <C-b> \textbf{}
+" au FileType tex nmap <C-i> i\textit{}
+" au FileType tex imap <C-i> \textit{}
+" au FileType tex nmap <C-b> i\textbf{}
+" au FileType tex imap <C-b> \textbf{}
 au FileType tex set spell
 
 set nocompatible   " Disable vi-compatibility
