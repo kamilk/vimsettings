@@ -57,6 +57,7 @@ set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
 command CDC cd %:p:h " Change directory to the current file
 
 nnoremap <F2> :nohl<RETURN>
+inoremap <F2> <ESC>:nohl<RETURN>a
 nmap <F3> :NERDTreeToggle<CR>
 nmap <F6> :make<CR>
 nmap <F8> :TagbarToggle<CR>
